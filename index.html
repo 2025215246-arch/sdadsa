@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AR Tree</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin:0; overflow:hidden">
+  <a-scene
+    embedded
+    vr-mode-ui="enabled:false"
+    arjs="sourceType:webcam; debugUIEnabled:false">
+
+    <a-marker preset="hiro">
+      <!-- Tree trunk -->
+      <a-cylinder position="0 0.7 0"
+        radius="0.12" height="1.4" color="#79502f">
+      </a-cylinder>
+
+      <!-- Tree leaves -->
+      <a-sphere position="0 1.7 0"
+        radius="0.65" color="#228b22">
+      </a-sphere>
+      <a-sphere position="-0.35 1.5 0"
+        radius="0.4" color="#32a852">
+      </a-sphere>
+      <a-sphere position="0.35 1.5 0"
+        radius="0.4" color="#2e8b35">
+      </a-sphere>
+      <a-sphere position="0 2.1 0"
+        radius="0.4" color="#3ca34a">
+      </a-sphere>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
